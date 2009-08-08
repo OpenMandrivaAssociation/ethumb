@@ -15,7 +15,7 @@ Source: %{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: evas-devel
 BuildRequires: ecore-devel
-BuildRequires: edje-devel
+BuildRequires: edje-devel edje
 BuildRequires: e_dbus-devel
 BuildRequires: emotion-devel
 
