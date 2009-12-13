@@ -1,4 +1,4 @@
-%define svnrel 41637
+%define svnrel 44424
 
 %define major 1
 %define libname %mklibname %name %major
@@ -42,7 +42,7 @@ Provides: %name-devel = %version-%release
 ethumb development headers and development libraries.
 
 %prep
-%setup -q -n %name
+%setup -q -n %name-%version
 
 %build
 NOCONFIGURE=yes ./autogen.sh
@@ -67,6 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dbus-1/services/org.enlightenment.Ethumb.service
 %{_datadir}/ethumb
 %{_libdir}/ethumb
+%{_libexecdir}/ethumbd_slave
 
 %files -n %libname
 %defattr(-,root,root)
