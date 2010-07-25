@@ -1,4 +1,4 @@
-%define svnrel 44424
+%define svnrel 20100715
 
 %define major 1
 %define libname %mklibname %name %major
@@ -75,6 +75,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n %develname
 %defattr(-,root,root)
-%{_includedir}/*.h
+%{_includedir}/ethumb-0/*.h
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
