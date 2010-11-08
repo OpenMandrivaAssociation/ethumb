@@ -1,4 +1,4 @@
-%define svnrel 20100715
+%define svnrel 20101107
 
 %define major 1
 %define libname %mklibname %name %major
