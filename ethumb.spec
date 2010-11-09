@@ -18,6 +18,7 @@ BuildRequires: ecore-devel
 BuildRequires: edje-devel edje
 BuildRequires: e_dbus-devel
 BuildRequires: emotion-devel
+BuildRequires: libexif-devel
 
 %description
 New library to generate thumbnails.
