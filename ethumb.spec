@@ -1,17 +1,15 @@
-%define svnrel 20101107
-
 %define major 1
 %define libname %mklibname %name %major
 %define develname %mklibname -d %name
 
 Summary: Enlightenment thumbnailing library
 Name: ethumb
-Version: 0.1
-Release: %mkrel -c %svnrel 1
+Version: 0.1.1.54472
+Release: %mkrel 1
 License: LGPLv3+
 Group: Graphical desktop/Enlightenment
 URL: http://www.enlightenment.org/
-Source: %{name}-%{version}.tar.bz2
+Source: http://download.enlightenment.org/snapshots/LATEST/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: evas-devel
 BuildRequires: ecore-devel
@@ -46,7 +44,7 @@ ethumb development headers and development libraries.
 %setup -q -n %name-%version
 
 %build
-NOCONFIGURE=yes ./autogen.sh
+autoreconf -fi
 %configure2_5x --disable-static
 %make
 
