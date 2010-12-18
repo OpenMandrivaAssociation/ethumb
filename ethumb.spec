@@ -4,7 +4,7 @@
 
 Summary: Enlightenment thumbnailing library
 Name: ethumb
-Version: 0.1.1.54472
+Version: 0.1.1.55225
 Release: %mkrel 1
 License: LGPLv3+
 Group: Graphical desktop/Enlightenment
