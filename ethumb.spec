@@ -33,7 +33,7 @@ BuildRequires:	pkgconfig(ecore)
 BuildRequires:	pkgconfig(edje)
 BuildRequires:	pkgconfig(emotion)
 BuildRequires:	pkgconfig(evas)
-BuildRequires:	pkgconfig(e_dbus)
+BuildRequires:	pkgconfig(edbus)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libexif)
 
