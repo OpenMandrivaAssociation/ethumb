@@ -11,7 +11,6 @@
 #cd ..; \
 #tar -Jcf ethumb-$PKG_VERSION.tar.xz ethumb/ --exclude .svn --exclude .*ignore
 
-
 %define	svndate	20120103
 %define	svnrev	66608
 
@@ -20,13 +19,13 @@
 %define	develname %mklibname -d %{name}
 
 Name:		ethumb
-Version:	0.1.1.%{svnrev}
-Release:	0.%{svndate}.1
+Version:	1.0.1
+Release:	1
 License:	LGPLv3+
 Summary:	Enlightenment thumbnailing library
 Group:		Graphical desktop/Enlightenment
 URL:		http://www.enlightenment.org/
-Source0:	%{name}-%{version}.tar.xz
+Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.gz
  
 BuildRequires:	edje
 BuildRequires:	evas
@@ -61,7 +60,7 @@ Provides:	%{name}-devel = %{version}-%{release}
 ethumb development headers and development libraries.
 
 %prep
-%setup -qn %{name}
+%setup -q
 
 %build
 NOCONFIGURE=yes ./autogen.sh
