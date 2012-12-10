@@ -19,23 +19,30 @@
 %define	develname %mklibname -d %{name}
 
 Name:		ethumb
-Version:	1.0.1
+Version:	1.7.3
 Release:	1
 License:	LGPLv3+
 Summary:	Enlightenment thumbnailing library
 Group:		Graphical desktop/Enlightenment
 URL:		http://www.enlightenment.org/
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.gz
- 
+
 BuildRequires:	edje
 BuildRequires:	evas
 BuildRequires:	pkgconfig(ecore)
+BuildRequires:	pkgconfig(ecore-file)
+BuildRequires:	pkgconfig(ecore-evas)
 BuildRequires:	pkgconfig(edje)
+BuildRequires:	pkgconfig(eina)
 BuildRequires:	pkgconfig(emotion)
 BuildRequires:	pkgconfig(evas)
 BuildRequires:	pkgconfig(edbus)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libexif)
+BuildRequires:	pkgconfig(edje)
+BuildRequires:	pkgconfig(lua)
+# Can be added later:
+#BuildRequires:	pkgconfig(epdf)
 
 %description
 New library to generate thumbnails.
@@ -63,15 +70,13 @@ ethumb development headers and development libraries.
 %setup -q
 
 %build
-NOCONFIGURE=yes ./autogen.sh
+#NOCONFIGURE=yes ./autogen.sh
 %configure2_5x \
 	--disable-static
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
-find %{buildroot} -name *.la | xargs rm
 
 %files
 %doc AUTHORS README
@@ -90,4 +95,47 @@ find %{buildroot} -name *.la | xargs rm
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_includedir}/%{name}*
+
+
+
+%changelog
+* Thu Jun 28 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.0.1-1
++ Revision: 807363
+- version update 1.0.1
+
+* Tue Jan 10 2012 Matthew Dawkins <mattydaw@mandriva.org> 0.1.1.66608-0.20120103.1
++ Revision: 759271
+- added BR evas
+- really evas module should be split out
+- fixed BR
+- new snapshot 0.1.1.66608
+- merged UnityLinux spec
+- disabled static build
+- cleaned up spec
+
+* Sat Dec 18 2010 Funda Wang <fwang@mandriva.org> 0.1.1.55225-1mdv2011.0
++ Revision: 622839
+- new version 0.1.1.55225
+
+* Tue Nov 16 2010 Funda Wang <fwang@mandriva.org> 0.1.1.54472-1mdv2011.0
++ Revision: 597993
+- new version 0.1.1.54472
+
+* Tue Nov 09 2010 Funda Wang <fwang@mandriva.org> 0.1-0.20101107.1mdv2011.0
++ Revision: 595175
+- BR exif
+- new snapshot
+
+* Sun Jul 25 2010 Funda Wang <fwang@mandriva.org> 0.1-0.20100715.1mdv2011.0
++ Revision: 558269
+- new snapshot
+
+* Sun Dec 13 2009 Funda Wang <fwang@mandriva.org> 0.1-0.44424.1mdv2010.1
++ Revision: 478207
+- New snapshot
+
+* Sat Aug 08 2009 Funda Wang <fwang@mandriva.org> 0.1-0.41637.1mdv2010.0
++ Revision: 411620
+- add BR for edje_cc
+- import ethumb
 
