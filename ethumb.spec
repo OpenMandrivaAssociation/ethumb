@@ -19,7 +19,7 @@
 %define	develname %mklibname -d %{name}
 
 Name:		ethumb
-Version:	1.7.3
+Version:	1.7.5
 Release:	1
 License:	LGPLv3+
 Summary:	Enlightenment thumbnailing library
