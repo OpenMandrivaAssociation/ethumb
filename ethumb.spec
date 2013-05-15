@@ -3,13 +3,13 @@
 %define	devname %mklibname -d %{name}
 
 Name:		ethumb
-Version:	1.7.6
+Version:	1.7.7
 Release:	1
 License:	LGPLv3+
 Summary:	Enlightenment thumbnailing library
 Group:		Graphical desktop/Enlightenment
 URL:		http://www.enlightenment.org/
-Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.gz
+Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
 
 BuildRequires:	edje
 BuildRequires:	evas
