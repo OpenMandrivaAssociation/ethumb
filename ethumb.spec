@@ -1,16 +1,15 @@
-%define	major	1
-%define	libname %mklibname %{name} %{major}
-%define	devname %mklibname -d %{name}
+%define major   1
+%define libname %mklibname %{name} %{major}
+%define devname %mklibname -d %{name}
 
+Summary:	Enlightenment thumbnailing library
 Name:		ethumb
-Version:	1.7.7
+Version:	1.7.8
 Release:	1
 License:	LGPLv3+
-Summary:	Enlightenment thumbnailing library
 Group:		Graphical desktop/Enlightenment
-URL:		http://www.enlightenment.org/
+Url:		http://www.enlightenment.org/
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-
 BuildRequires:	edje
 BuildRequires:	evas
 BuildRequires:	pkgconfig(ecore)
@@ -44,8 +43,8 @@ New library to generate thumbnails.
 %package -n %{devname}
 Summary:	Enlightenment thumbnailing library - devel files
 Group:		Development/C
-Requires:	%{libname} = %{version}-%{release}
-Provides:	%{name}-devel = %{version}-%{release}
+Requires:	%{libname} = %{EVRD}
+Provides:	%{name}-devel = %{EVRD}
 
 %description -n %{devname}
 ethumb development headers and development libraries.
