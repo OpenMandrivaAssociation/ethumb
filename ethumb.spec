@@ -1,3 +1,4 @@
+#This package is OBSOLETE it has been merged into efl
 %define major   1
 %define libname %mklibname %{name} %{major}
 %define devname %mklibname -d %{name}
